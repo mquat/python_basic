@@ -11,6 +11,3 @@ for i in report_no:
         report_file.write("\n부서 :")
         report_file.write("\n이름 :")
         report_file.write("\n업무 요약 :")
-
-#i를 문자화(str)하는 것을 빼먹음 
-#for문에서 i in range(1,51)로 바로 작성해보자 (더 간결하니까)
