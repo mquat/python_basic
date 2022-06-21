@@ -1,15 +1,16 @@
-N = int(input())
+X = int(input())
 
 line = 1
-while N>line:
-    N -= line
+while X > line:
+    X -= line
     line += 1
 
-if line%2 == 0:
-    A = N
-    B = line-N+1
+if line % 2 == 0:
+    A = X
+    B = line-X+1
 else:
-    A = line-N+1
-    B = N
+    A = line-X+1
+    B = X
 
+#print(f'{A}/{B}')
 print(A, '/', B, sep="")
