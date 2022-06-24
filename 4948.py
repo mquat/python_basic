@@ -1,4 +1,4 @@
-def isPrime(num):
+def is_prime(num):
     if num == 1: return False
     for i in range(2,int(num**(1/2))+1):
         if num%i == 0: return False
@@ -12,6 +12,6 @@ while True:
     cnt = 0
 
     for i in range(N+1, (2*N)+1): 
-        if isPrime(i): cnt += 1
+        if is_prime(i): cnt += 1
 
     print(cnt)
