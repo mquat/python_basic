@@ -24,25 +24,25 @@ co.send(3)  #3을 코루틴으로 보냄 -> print(3)
 def coroutine_test():
     greeting = "good"
     while True:
-        text = (yield greeting)
+        text = (yield greeting) #yield에 send가 보낸 값을 담아 변수 text에 저장, 변수 greeting도 담는다
         print("text = ", end=""), print(text)
-        greeting += text 
+        greeting += text    #good에 text값을 더한다. 여러 번 호출될 때, 이전에 더해진 값들을 계속 유지한다 (코루틴의 특징)
 
 if __name__ == "__main__":
     cr = coroutine_test()
     print("cr=",end=""), print(cr)
 
-    next(cr)
+    next(cr)    #코루틴 최초 실행
     time.sleep(2)
 
     print("send 1")
-    print(cr.send("morning"))
+    print(cr.send("morning"))   #goodmorning
     time.sleep(2)
 
     print("send 2")
-    print(cr.send("afternoon"))
+    print(cr.send("afternoon")) #goodmorningafternoon
     time.sleep(2)
 
     print("send 3")
-    print(cr.send("evening"))
+    print(cr.send("evening"))   #goodmorningafternoonevening
     time.sleep(2)
