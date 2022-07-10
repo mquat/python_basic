@@ -3,6 +3,7 @@
 K = int(input())
 
 def hanoi_move(num,a,b,c):
+    #종료 조건
     if num == 1:
         print(a,c)
     else:
@@ -13,7 +14,7 @@ def hanoi_move(num,a,b,c):
 cnt = 0
 
 for _ in range(K):
-    cnt = cnt *2 + 1
+    cnt = (cnt*2) + 1
 
 print(cnt)
-hanoi_move(K,1,2,3)
+hanoi_move(K,1,2,3) 
