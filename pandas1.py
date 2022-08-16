@@ -11,3 +11,4 @@ mydataset = {
 #따라서, python3. [file name.py] 를 통해 run하여 오류 해결 
 myvar = pd.DataFrame(mydataset)
 print(myvar)
+print(pd.__version__)
