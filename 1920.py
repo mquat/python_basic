@@ -1,4 +1,3 @@
-
 N = int(input())
 A = list(map(int, input().split()))
 M = int(input())
@@ -12,24 +11,23 @@ B = list(map(int, input().split()))
 
 
 #두 번째 방법 - 이분 탐색
-def binary_search(target,data):
-    data.sort()
+#만약 이분탐색을 binary_search()라는 함수로 따로 정의하고, for문을 통해 B의 요소를 하나씩 꺼내서 함수 적용하면 이것도 시간초과! 
+A.sort()
+
+for target in B:
     start = 0
-    end = len(data) -1
+    end = N - 1
 
     while start <= end:
         mid = (start + end)//2
 
-        if data[mid] == target:
-            return mid
-        elif data[mid] < target:
+        if A[mid] == target:
+            print(1)
+            break
+        elif A[mid] < target:
             start = mid+1
         else:
             end = mid-1
-
-for target in B:
-    idx = binary_search(target,A)
-    if idx:
-        print(1)
-    else:
+        
+    if target not in A:
         print(0)
