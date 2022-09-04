@@ -2,20 +2,20 @@ n = int(input())
 
 number_list = [0,1]
 
-for i in range(2, n+1):
-    number_list.append(number_list[-2]+number_list[-1])
+# for i in range(2, n+1):
+#     number_list.append(number_list[-2]+number_list[-1])
 
-print(number_list[n])
+# print(number_list[n])
 
-#틀린 접근
-# def fibonacci(num):
-#     if n == 0 or n == 1:
-#         return 0
-#     elif n == 2:
-#         return 1
-#     else:
-#         while len(number_list) <= num:
-#             number_list.append(number_list[-2]+number_list[-1])
-#         return number_list[-1]
+#다른 접근 
+def fibonacci(num):
+    if n == 0:
+        return 0
+    elif n== 1 or n == 2:
+        return 1
+    else:
+        while len(number_list) <= num:
+            number_list.append(number_list[-2]+number_list[-1])
+        return number_list[-1]
 
-# print(fibonacci(n))
+print(fibonacci(n))
