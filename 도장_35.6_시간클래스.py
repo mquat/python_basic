@@ -24,3 +24,4 @@ if Time.is_time_valid(time_string):
 else:
     print('잘못된 시간 형식입니다.')
 
+
