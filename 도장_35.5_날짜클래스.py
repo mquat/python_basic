@@ -8,3 +8,5 @@ if Date.is_date_valid('2000-10-31'):
     print('올바른 날짜 형식입니다')
 else:
     print('잘못된 날짜 형식입니다')
+
+
